@@ -6,13 +6,13 @@ const {
     GraphQLSchema,
 } = graphql;
 
-const { getMovies } = require('./queries/queries');
+const queries = require('./queries/queries');
 
 
 const RootType = new GraphQLObjectType({
     name: 'RootType',
     fields: () => ({
-        getMovies
+        ...queries
     }),
 });
 
