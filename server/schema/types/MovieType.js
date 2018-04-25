@@ -15,6 +15,7 @@ module.exports = new GraphQLObjectType({
         vote_average: { type: GraphQLFloat },
         title: { type: GraphQLString },
         poster_path: { type: GraphQLString },
+        backdrop_path: { type: GraphQLString },
         overview: { type: GraphQLString },
     }),
 });

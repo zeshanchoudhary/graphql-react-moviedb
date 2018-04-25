@@ -1,0 +1,83 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.switch {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-tile {
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+.grid-tile:hover {
+  cursor: pointer;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.main {
+  background-image: url("http://image.tmdb.org/t/p/w1280//oVdLj5JVqNWGY0LEhBfHUuMrvWJ.jpg");
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  position: absolute;
+  opacity: .8;
+}
+
+.main p {
+  width: 40%;
+}
+
+.main h2 {
+  font-size: 3rem;
+}
+
+.main h2, p {
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .bg-gradient img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.main .bg-gradient img {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
