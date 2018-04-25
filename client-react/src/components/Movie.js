@@ -16,6 +16,9 @@ class Movie extends React.Component {
       flex-direction: column;
       justify-content: center;
       align-items: center;      
+      &:hover {
+        
+      }
     `;
 
       const data = this.props.data;
