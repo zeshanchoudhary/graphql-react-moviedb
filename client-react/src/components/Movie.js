@@ -4,7 +4,7 @@ import { getMovie } from '../queries/queries';
 import styled from 'styled-components';
 
 class Movie extends React.Component {
-  
+
   render(){
     const MovieBackground = styled.div`
       background-image: url(${props => props.backdrop});
@@ -13,9 +13,9 @@ class Movie extends React.Component {
       background-size: cover;
       position: relative;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
-      align-items: center;      
+      align-items: center;
     `;
 
       const data = this.props.data;
@@ -26,8 +26,14 @@ class Movie extends React.Component {
         console.log(`http://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`);
         return (
           <MovieBackground backdrop={`http://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`} className="main">
+            <div className="image-container">
+              <img alt="poster" src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} />
+            </div>
+            <div className="content">
               <h2>{movie.title}</h2>
+              <h4>Overview</h4>
               <p>{movie.overview}</p>
+            </div>
           </MovieBackground>
         )
       }
