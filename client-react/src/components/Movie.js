@@ -7,9 +7,10 @@ class Movie extends React.Component {
 
   render(){
     const MovieBackground = styled.div`
-      background-image: url(${props => props.backdrop});
       width: 100%;
       height: 800px;
+      background-image: url(${props => props.backdrop});
+      background-repeat: no-repeat;
       background-size: cover;
       position: relative;
       display: flex;
