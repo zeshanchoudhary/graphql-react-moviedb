@@ -8,6 +8,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 // componets 
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql"
@@ -18,16 +20,16 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-         {/* <div className="container"> */}
           <MuiThemeProvider>
             <BrowserRouter>
-              <div className="switch">
+              <div>
+                <Navbar />
                 <Route exact path="/" component={MovieList} />
+                <Route path="/new" component={Home} />
                 <Route path="/movie/:id" component={Movie} />
               </div>
             </BrowserRouter>
           </MuiThemeProvider>
-        {/* </div> */}
       </ApolloProvider>
     );
   }
