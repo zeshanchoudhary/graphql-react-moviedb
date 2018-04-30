@@ -7,6 +7,24 @@ import './Home.css';
 
 class Home extends React.Component {
     
+    constructor(){
+        super();
+        this.state = {
+            movies: [],
+            filteredMovies: [],
+        }
+    }
+
+    // componentWillReceiveProps(){
+    //     const data = this.props.data;
+    //     if(!this.props.data.loading){
+    //         this.setState({
+    //             movies: data.getMovies,
+    //         });
+    //     }
+    //     console.log(this.state.movies);
+    // }
+
     displayMovies(){
         const data = this.props.data;
         if(data.loading){
@@ -28,12 +46,17 @@ class Home extends React.Component {
     handleClick() {
         console.log("clicked");
     }
+
+    handleFilter(movies){
+        console.log(movies);
+    }
     
     
     render(){
         console.log(this.props);
         return (
             <div id="home">
+                <Navbar movies={this.state.movies} filter={this.handleFilter} />
                 <div className="left-section">
                     <ul className="lista">
                         <li className="lista-item" onClick={this.handleClick}>New Releases</li>

@@ -23,7 +23,7 @@ class App extends Component {
           <MuiThemeProvider>
             <BrowserRouter>
               <div>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Route exact path="/" component={MovieList} />
                 <Route path="/new" component={Home} />
                 <Route path="/movie/:id" component={Movie} />
