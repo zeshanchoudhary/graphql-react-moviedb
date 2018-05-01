@@ -4,11 +4,12 @@ import './Navbar.css';
 class Navbar extends React.Component {
 
     filterMovies = () => {
-        console.log('filtering', this.filterText.value);
-        const filteredMovies = this.props.movies.filter((movie) => {
-            return movie.title.indexOf(this.filterText.value) !== -1;
-        })
-        this.props.filter(filteredMovies);
+        // console.log('filtering', this.filterText.value);
+        // const filteredMovies = this.props.movies.filter((movie) => {
+        //     return movie.title.indexOf(this.filterText.value) !== -1;
+        // })
+        // this.props.filter(filteredMovies);
+        this.props.filter(this.filterText.value);
     }
     
     render(){

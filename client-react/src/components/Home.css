@@ -24,6 +24,9 @@
     color: #E3DFDC;
     font-size: 1.4em;
     font-weight: 400;
+    position: sticky;
+    top: 60px;
+    left: 0;
 }
 
 
@@ -98,7 +101,7 @@
 /* portrait smartphone */
 @media screen and (max-width: 768px) {
     .movie-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .single-movie {
         text-align: center;

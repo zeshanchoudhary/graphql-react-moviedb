@@ -9,7 +9,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql"
