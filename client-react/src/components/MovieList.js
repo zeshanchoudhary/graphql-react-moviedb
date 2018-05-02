@@ -23,7 +23,7 @@ class MovieList extends React.Component {
     const data = this.props.data;
     if(data.loading){
         return (
-            <CircularProgress style={styles.circular} size={80} thickness={5} /> 
+            <CircularProgress style={styles.circular} size={80} thickness={5} />
         )
     } else {
       return(
@@ -53,7 +53,7 @@ class MovieList extends React.Component {
 
 
   render(){
-    
+
     console.log(this.props);
     return(
       <div>

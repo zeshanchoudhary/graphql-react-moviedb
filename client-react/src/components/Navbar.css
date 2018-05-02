@@ -1,0 +1,73 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    font-family: 'Roboto';
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    position: fixed;
+}
+
+.main-nav .branding {
+    width: 20%;
+    background-color: #FC4D55;
+    color: #fff;
+}
+
+.main-nav .branding p {
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.main-nav .search-rest {
+    width: 80%;
+    background-color: #FC4D55;
+    opacity: .9;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+::placeholder {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.main-nav .search-rest i {
+    margin-left: 20px;
+    opacity: .8;
+}
+
+
+.main-nav .search-rest i > input {
+    margin-left: 10px;
+    box-shadow: none;
+    outline: none;
+    font-family: 'Roboto';
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    width: 60%;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 1.3em;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 480px) {
+    .main-nav .branding p {
+        font-size: 0.8em;
+    }
+}
