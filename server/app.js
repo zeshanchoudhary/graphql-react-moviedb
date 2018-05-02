@@ -13,7 +13,6 @@ app.use("/graphql", expressGraphQL({
     graphiql: true,
 }));
 
-
 // running the server
 app.listen(4000, () => {
     console.log('App running at port 4000...');

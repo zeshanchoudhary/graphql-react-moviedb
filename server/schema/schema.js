@@ -1,7 +1,7 @@
 
 const graphql = require('graphql');
 
-const { 
+const {
     GraphQLObjectType,
     GraphQLSchema,
 } = graphql;
@@ -23,7 +23,7 @@ const RootType = new GraphQLObjectType({
 //     }),
 // });
 
-// Schema 
+// Schema
 module.exports = new GraphQLSchema({
     query: RootType,
     // mutation: RootMutations,

@@ -5,7 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { BrowserRouter, Route } from "react-router-dom";
 
-// componets 
+// componets
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
 import Home from './components/Home';
@@ -23,8 +23,8 @@ class App extends Component {
             <BrowserRouter>
               <div>
                 {/* <Navbar /> */}
-                <Route exact path="/" component={MovieList} />
-                <Route path="/new" component={Home} />
+                <Route exact path="/" component={Home} />
+                <Route path="/old" component={MovieList} />
                 <Route path="/movie/:id" component={Movie} />
               </div>
             </BrowserRouter>
