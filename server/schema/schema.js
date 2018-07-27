@@ -1,22 +1,22 @@
+var graphql = require('graphql');
 
-const graphql = require('graphql');
+var { GraphQLObjectType, GraphQLSchema } = graphql;
 
-const {
-    GraphQLObjectType,
-    GraphQLSchema,
-} = graphql;
+var queries = require('./queries/queries');
 
-const queries = require('./queries/queries');
+var getMovies = queries.getMovies;
 
+var getMovie = queries.getMovie;
 
-const RootType = new GraphQLObjectType({
-    name: 'RootType',
-    fields: () => ({
-        ...queries
-    }),
+var RootType = new GraphQLObjectType({
+  name: 'RootType',
+  fields: () => ({
+    getMovies,
+    getMovie
+  })
 });
 
-// const RootMutations = new GraphQLObjectType({
+// var RootMutations = new GraphQLObjectType({
 //     name: 'RootMutations',
 //     fields: () => ({
 
@@ -25,6 +25,6 @@ const RootType = new GraphQLObjectType({
 
 // Schema
 module.exports = new GraphQLSchema({
-    query: RootType,
-    // mutation: RootMutations,
+  query: RootType
+  // mutation: RootMutations,
 });
